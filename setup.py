@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="pyspark_parser",
+    name="pyspark_parser2",
     version="0.0.1",
     author="Example Author",
     author_email="mukesh7773sharma@successive.tech",

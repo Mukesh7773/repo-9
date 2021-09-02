@@ -11,13 +11,13 @@ class Pyspark:
         # container_name = "parserfs"
         # relative_path = ""
         adls_path = 'abfss://%s@%s.dfs.core.windows.net/%s' % (container_name, account_name, relative_path)
-        df_pyspark = spark.read.csv(adls_path + , header=True, inferSchema=True)
+        df_pyspark = spark.read.csv(adls_path + file_name, header=True, inferSchema=True)
         df_pyspark.show()
-        name_list = df_pyspark.select("Name")
-        name_array = [str(row.Name) for row in name_list.collect()]
+        exclude = df_pyspark.select("exclude")
+        exclude_array = [str(row.exclude) for row in exclude.collect()]
         new_dictionary = {};
-        for x in name_array:
-            if x[0] == x.split("@")[1][0]:
+        for x in exclude_array:
+            if x == 'true':
                 new_dictionary[x] = "100% Compliant"
         else:
             new_dictionary[x] = "0% Compliant"
