@@ -1,11 +1,13 @@
-
+from niki import *
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()
 
 
 class Parser:
-    def parserdata(self,df_pyspark):
+    def parserdata(**kwargs):
+        df_pyspark = Taxmdata.data()
+
         exclude = df_pyspark.select("exclude")
         exclude_array = [str(row.exclude) for row in exclude.collect()]
         new_dictionary = {};
