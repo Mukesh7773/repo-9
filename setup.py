@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pyspark_parser3",
-    version="0.0.3",
+    version="0.0.5",
     author="Example Author",
     author_email="mukesh7773sharma@successive.tech",
     description="A small example package",

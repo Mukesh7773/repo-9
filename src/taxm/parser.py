@@ -5,7 +5,7 @@ spark = SparkSession.builder.getOrCreate()
 
 
 class Parser:
-    def parserdata(**kwargs):
+    def parserdata():
         df_pyspark = Taxmdata.data()
 
         exclude = df_pyspark.select("exclude")

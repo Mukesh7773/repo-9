@@ -3,12 +3,12 @@ from pyspark.sql import SparkSession
 spark = SparkSession.builder.getOrCreate()
 
 class Taxmdata:
-    def data(**kwargs):
-        client_code= kwargs['client_id']
-        tenantid = kwargs['tenantid']
-        container_name =kwargs['container_name']
-        account_name =kwargs['account_name']
-        relative_path =kwargs['relative_path']
+    def data(self,client_code,tenantid,container_name,account_name,relative_path ):
+        # client_code= kwargs['client_id']
+        # tenantid = kwargs['tenantid']
+        # container_name =kwargs['container_name']
+        # container_name =kwargs['account_name']
+        # relative_path =kwargs['relative_path']
 
 
         # clientid = 12321
