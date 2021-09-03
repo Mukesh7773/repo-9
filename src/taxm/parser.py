@@ -1,4 +1,4 @@
-from niki import *
+from .niki import *
 from pyspark.sql import SparkSession
 
 spark = SparkSession.builder.getOrCreate()
